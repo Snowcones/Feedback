@@ -6,16 +6,17 @@
 //  Copyright (c) 2015 William Henning. All rights reserved.
 //
 
-#include "MidiFile.h"
-#include "Options.h"
+#include "midi/include/MidiFile.h"
+#include "midi/include/Options.h"
 #include <iostream>
-#include <OpenAL/al.h>
+#include <AL/al.h>
 #include <cstdio>
 #include <cstdlib>
+#include <limits.h>
 #include <cmath>
 #include <iostream>
-#include <OpenAL/al.h>
-#include <OpenAL/alc.h>
+#include <AL/al.h>
+#include <AL/alc.h>
 #include <unistd.h>
 #include "testPerlin.h"
 #include <sys/time.h>
@@ -180,7 +181,7 @@ int getNoteForPentScale(int root, int note);
 int main(int argc, char** argv) {
     
     MidiFile midifile;
-    string loc="/Users/William/Downloads/Led_Zeppelin_-_Stairway_to_Heaven.mid";
+    string loc="Led_Zeppelin_-_Stairway_to_Heaven";
     midifile.read(loc);
     if (!midifile.status()) {
         cout << "Error reading MIDI file " << loc << endl;
