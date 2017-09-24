@@ -1,6 +1,7 @@
 *.swp
 *.swo
 .vimrc
+a.out
 Led_Zeppelin_-_Stairway_to_Heaven
 find_replace_ag
 tags
